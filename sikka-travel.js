@@ -357,18 +357,73 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // create all offers content functionality
 const sectionData = [
+
+    {
+        title: 'عروض مشهد',
+        main_image_1: {
+            mainSrc: 'عروض-شركة-سكة/عروض-مشهد-1/عرض-مشهد-1.jpg',
+            subImages: [
+                'عروض-شركة-سكة/عروض-مشهد-1/عرض-مشهد-1-تفاصيل-1.jpg',
+                'عروض-شركة-سكة/عروض-مشهد-1/عرض-مشهد-1-تفاصيل-2.jpg',
+                'عروض-شركة-سكة/عروض-مشهد-1/عرض-مشهد-1-تفاصيل-3.jpg',
+            ],
+            text: 'عرض مشهد - روسيا',
+        },
+
+        main_image_2: {
+            mainSrc: 'عروض-شركة-سكة/عروض-مشهد-2/عرض-مشهد-2.jpg',
+            subImages: [
+                'عروض-شركة-سكة/عروض-مشهد-2/عرض-مشهد-2-تفاصيل-1.jpg',
+                'عروض-شركة-سكة/عروض-مشهد-2/عرض-مشهد-2-تفاصيل-2.jpg',
+                'عروض-شركة-سكة/عروض-مشهد-2/عرض-مشهد-2-تفاصيل-3.jpg',
+            ],
+            text: 'عرض مشهد - روسيا',
+        },
+
+        main_image_3: {
+            mainSrc: 'عروض-شركة-سكة/عروض-مشهد-3/عرض-مشهد-3.jpg',
+            subImages: [
+                'عروض-شركة-سكة/عروض-مشهد-3/عرض-مشهد-3-تفاصيل-1.jpg',
+                'عروض-شركة-سكة/عروض-مشهد-3/عرض-مشهد-3-تفاصيل-2.jpg',
+                'عروض-شركة-سكة/عروض-مشهد-3/عرض-مشهد-3-تفاصيل-3.jpg',
+            ],
+            text: 'عرض مشهد - روسيا',
+        },
+    },
+
     {
         title: 'عروض سوتشي',
         main_image_1: {
-            mainSrc: 'عروض-شركة-سكة/عروض-سوتشي/عرض-سوتشي-1.jpg',
+            mainSrc: 'عروض-شركة-سكة/عروض-سوتشي-1/عرض-سوتشي-1.jpg',
             subImages: [
-                'عروض-شركة-سكة/عروض-سوتشي/عرض-سوتشي-1-تفاصيل-1.jpg',
-                'عروض-شركة-سكة/عروض-سوتشي/عرض-سوتشي-1-تفاصيل-2.jpg',
-                'عروض-شركة-سكة/عروض-سوتشي/عرض-سوتشي-1-تفاصيل-3.jpg',
+                'عروض-شركة-سكة/عروض-سوتشي-1/عرض-سوتشي-1-تفاصيل-1.jpg',
+                'عروض-شركة-سكة/عروض-سوتشي-1/عرض-سوتشي-1-تفاصيل-2.jpg',
+                'عروض-شركة-سكة/عروض-سوتشي-1/عرض-سوتشي-1-تفاصيل-3.jpg',
+            ],
+            text: 'عرض سوتشي - روسيا',
+        },
+
+        main_image_2: {
+            mainSrc: 'عروض-شركة-سكة/عروض-سوتشي-2/عرض-سوتشي-2.jpg',
+            subImages: [
+                'عروض-شركة-سكة/عروض-سوتشي-2/عرض-سوتشي-2-تفاصيل-1.jpg',
+                'عروض-شركة-سكة/عروض-سوتشي-2/عرض-سوتشي-2-تفاصيل-2.jpg',
+                'عروض-شركة-سكة/عروض-سوتشي-2/عرض-سوتشي-2-تفاصيل-3.jpg',
+            ],
+            text: 'عرض سوتشي - روسيا',
+        },
+
+        main_image_3: {
+            mainSrc: 'عروض-شركة-سكة/عروض-سوتشي-3/عرض-سوتشي-3.jpg',
+            subImages: [
+                'عروض-شركة-سكة/عروض-سوتشي-3/عرض-سوتشي-3-تفاصيل-1.jpg',
+                'عروض-شركة-سكة/عروض-سوتشي-3/عرض-سوتشي-3-تفاصيل-2.jpg',
+                'عروض-شركة-سكة/عروض-سوتشي-3/عرض-سوتشي-3-تفاصيل-3.jpg',
             ],
             text: 'عرض سوتشي - روسيا',
         },
     },
+
     {
         title: 'عروض طرابزون',
         main_image_1: {
@@ -391,6 +446,20 @@ const sectionData = [
             text: 'عرض طرابزون - 8 أيام',
         },
     },
+
+    {
+        title: 'عروض اسطنبول',
+        main_image_1: {
+            mainSrc: 'عروض-شركة-سكة/عروض-اسطنبول-1/عرض-اسطنبول-1.jpg',
+            subImages: [
+                'عروض-شركة-سكة/عروض-اسطنبول-1/عرض-اسطنبول-1-تفاصيل-1.jpg',
+                'عروض-شركة-سكة/عروض-اسطنبول-1/عرض-اسطنبول-1-تفاصيل-2.jpg',
+                'عروض-شركة-سكة/عروض-اسطنبول-1/عرض-اسطنبول-1-تفاصيل-3.jpg',
+            ],
+            text: 'عرض اسطنبول - 8 أيام',
+        },
+    },
+
 ];
 
 
@@ -484,7 +553,7 @@ function openFullScreenImage(mainSrc, subImages, text) {
     const whatsappButton = document.createElement('a');
     whatsappButton.className = 'whatsapp_button';
     whatsappButton.innerText = 'إرسال هذا العرض';
-    whatsappButton.href = `https://wa.me/+97339004446?text=طلب%20حجز%20هذا%20العرض:%0A%0Ahttps://mohammed-website.github.io/sikkatravel/${encodeURIComponent(mainSrc)}`;
+    whatsappButton.href = `https://wa.me/+97338811136?text=طلب%20حجز%20هذا%20العرض:%0A%0Ahttps://mohammed-website.github.io/sikkatravel/${encodeURIComponent(mainSrc)}`;
     fullScreenDiv.appendChild(whatsappButton);
 
     // Close on background click
@@ -729,7 +798,7 @@ openWhatsAppNumber = function () {
 
     insertNewClick('alseef.com');
 
-    const whatsappNumber = "+97339004446";
+    const whatsappNumber = "+97338811136";
     const message = encodeURIComponent('سلام عليكم ورحمة الله وبركاته'); // Optional pre-filled message
     const url = `https://wa.me/${whatsappNumber}?text=${message}`;
     window.open(url, "_blank"); // Opens in a new tab
