@@ -23,11 +23,23 @@
 
     <header id="mughader_header">
         <div class="mughader_header_container">
-            <img src="مكتب-سياحي/مكتب-سياحي-بحريني.png" alt="مكتب سياحي - مغادر" class="mughader_header_logo">
+            <img src="مكتب-سياحي/مكتب-سياحي-بحريني.webp" alt="مكتب سياحي - مغادر" class="mughader_header_logo">
             <nav class="mughader_desktop_nav">
                 <ul class="mughader_nav_links">
-                    <li><a href="#home">الصفحة الرئيسية</a></li>
-                    <li><a href="#about_us_section_id">من نحن؟</a></li>
+                    <li><a onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); closeSidebar()">الصفحة الرئيسية</a>
+                    </li>
+                    <li><a onclick="scrollToWhoAreWe('about_us_section_id')">من نحن؟</a></li>
+                    <li>
+                        <a href="https://www.instagram.com/sikka.holidays?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank" class="mughader_social_icon">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="openWhatsAppNumber()" class="mughader_social_icon">
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <div class="mughader_mobile_menu_icon" onclick="toggleSidebar()">
@@ -37,8 +49,26 @@
         <div class="mughader_mobile_sidebar" id="mughader_mobile_sidebar">
             <span class="mughader_close_icon" onclick="closeSidebar()">&times;</span>
             <ul>
-                <li><a href="#home">الصفحة الرئيسية</a></li>
-                <li><a href="#about_us_section_id" onclick="toggleSidebar()">من نحن؟</a></li>
+                <li><a onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); closeSidebar()">الصفحة الرئيسية</a>
+                </li>
+                <li><a onclick="scrollToWhoAreWe('about_us_section_id'); closeSidebar()">من
+                        نحن؟</a></li>
+
+                <div class="mughader_mobile_social_icons_div">
+
+                    <li>
+                        <a href="https://www.instagram.com/sikka.holidays?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank" class="mughader_social_icon">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="openWhatsAppNumber()" class="mughader_social_icon">
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+                        </a>
+                    </li>
+                </div>
+
             </ul>
         </div>
         <div class="mughader_sidebar_overlay" id="mughader_sidebar_overlay" onclick="closeSidebar()"></div>
@@ -52,32 +82,28 @@
 
 
 
+    <section class="neon_section">
+        <div class="neon_overlay">
+            <div class="neon_text_container">
 
-    <section class="wow_effect_section">
-        <div class="wow_overlay">
-            <div class="wow_text_container">
-                <div class="wow_glass_box">
-                    <h1 class="wow_title" title="مكتب سياحي - مغادر">شركة سكة للسفر والسياحة</h1>
-                    <h2 class="wow_subtitle">
-                        <a href="https://www.google.com/maps/place/Sikka+Travel+%26+Tourism+%7C+%D8%B3%D9%83%D8%A9+%D9%84%D9%84%D8%B3%D9%81%D8%B1+%D9%88%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%AD%D8%A9%E2%80%AD/@26.154412,50.5106918,1140m/data=!3m2!1e3!4b1!4m6!3m5!1s0xac21648702fe461b:0x61fd218e2f75b2d4!8m2!3d26.154412!4d50.5106918!16s%2Fg%2F11y3qcbmcg?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
-                            target="_blank" class="wow_location_icon" title="Open Location in Google Maps">
-                            <ion-icon name="location-sharp"></ion-icon>
-                        </a>
-                        موقعنا: مملكة البحرين
-                    </h2>
-                    <div class="wow_dynamic_text">
-                        <span id="mughader_dynamic_word_switch" class="wow_dynamic_word">عروض مشهد</span>
-                        <div id="mughader_line_timer" class="wow_timer_line"></div>
-                    </div>
-                </div>
+                <h1 class="neon_title" title="شركة سياحية">شركة سكة للسفر والسياحة</h1>
+
+                <p class="neon_subtitle">موقعنا: مملكة البحرين
+
+                    <a href="https://www.google.com/maps/place/Sikka+Travel+%26+Tourism+%7C+%D8%B3%D9%83%D8%A9+%D9%84%D9%84%D8%B3%D9%81%D8%B1+%D9%88%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%AD%D8%A9%E2%80%AD/@26.154412,50.5106918,1140m/data=!3m2!1e3!4b1!4m6!3m5!1s0xac21648702fe461b:0x61fd218e2f75b2d4!8m2!3d26.154412!4d50.5106918!16s%2Fg%2F11y3qcbmcg?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank" class="wow_location_icon" title="Open Location in Google Maps">
+                        <ion-icon name="location-sharp"></ion-icon>
+                    </a>
+
+                </p>
+
+                <a onclick="scrollToMiddleOfElement('scrollable_section_title')" class="neon_button">تصفح العروض
+                    السياحية</a>
+
             </div>
         </div>
+        <canvas id="neon_canvas"></canvas>
     </section>
-
-
-
-
-
 
 
 
@@ -110,24 +136,21 @@
     <section id="about_us_section_id" class="mughader_last_section">
 
 
-        <h1 class="mughader_animate_on_scroll" title="مكتب سياحي - مغادر"
-            style="font-weight: bolder; font-size: 2vmax;">من نحن</h1>
-        <p class="mughader_animate_on_scroll">شركة سكة للسفر والسياحة</p>
-        <p class="mughader_animate_on_scroll">شركة سياحية مقرها مملكة البحرين</p>
-        <p class="mughader_animate_on_scroll">أستطاعت الشركة الحصول على شعبية واسعة بسبب مصداقيتها وتميزها بتقديم
-            الخدمات واجمل البرامج السياحية حول العالم</p>
-        <p class="mughader_animate_on_scroll">نقدم خدماتنا في عدة دول منها:</p>
-        <p class="mughader_animate_on_scroll">جورجيا – اذربيجان – تركيا – سيريلانكا – ماليزيا – البوسنة – الجبل الأسود –
-            دبي – مصر – الهند - تايلاند - سنغافورة</p>
-
-
+        <h1 title="مكتب سياحي - مغادر" style="font-weight: bolder; font-size: 2vmax;">من نحن</h1>
+        <p>شركة سكة للسفر والسياحة</p>
+        <p>شركة سياحية مقرها مملكة البحرين</p>
+        <p>سكة تأخذك إلى حيث ما تريد عبر عروضها وبرامجها السياحيه لتسافر حول
+            العالم وتستمتع برحلاتك. ننسق لك رحلتك من جميع الجوانب، حجز التذاكر واختيار أفضل الفنادق والجولات السياحيه
+            بأسعار تتناسب مع ميزانيتك. كما توفر سكة خدمات مميزه و برامج للشركات وقطاع الأعمال بتكاليف مثالية من
+            خلال خبراءنا في المؤسسة.</p>
 
 
         <div class="enter_your_email_for_our_news_div">
-            <p class="cta_text mughader_animate_on_scroll">اشترك الآن في نشرتنا البريدية للحصول على أحدث العروض والبرامج السياحية</p>
-            <div class="email_subscription_form mughader_animate_on_scroll">
-                <input type="email" placeholder="أدخل بريدك الإلكتروني" aria-label="أدخل بريدك الإلكتروني" class="mughader_animate_on_scroll">
-                <button type="submit" class="mughader_animate_on_scroll">اشترك الآن</button>
+            <p class="cta_text">اشترك الآن في نشرتنا البريدية للحصول على أحدث العروض والبرامج
+                السياحية</p>
+            <div class="email_subscription_form">
+                <input type="email" placeholder="أدخل بريدك الإلكتروني" aria-label="أدخل بريدك الإلكتروني">
+                <button type="submit">اشترك الآن</button>
             </div>
         </div>
 
@@ -142,14 +165,43 @@
 
 
 
+
+
+
     <!-- Custormers Comments -->
     <section class="mughader_customers_comments_section">
 
-        <h6 class="mughader_animate_on_scroll">أراء عملائنا</h6>
+        <h6>أراء عملائنا</h6>
 
-        <div id="mughader_customers_comments_section_id">
 
+        <div id="indoforall_clint_rate_area">
+            <!-- JavaScript Dynamic Code -->
         </div>
+
+        <div class="indoforall_insert_comment_form_div">
+            <h3>شارك تجربتك مع سكة</h3>
+            <form id="indoforall_comment_form">
+                <label for="indoforall_comment_username">إسمك:</label>
+                <input type="text" id="indoforall_comment_username" required>
+
+                <label for="indoforall_comment_text">رأيك:</label>
+                <textarea id="indoforall_comment_text" required></textarea>
+
+                <label for="indoforall_comment_stars">تقييمك:</label>
+                <select id="indoforall_comment_stars" required>
+                    <option value="5">★★★★★ (5)</option>
+                    <option value="4">★★★★☆ (4)</option>
+                    <option value="3">★★★☆☆ (3)</option>
+                    <option value="2">★★☆☆☆ (2)</option>
+                    <option value="1">★☆☆☆☆ (1)</option>
+                </select>
+
+                <button type="indoforall_comment_submit" style="pointer-events: none;">إرسال</button>
+            </form>
+        </div>
+
+
+        <div id="indoforall_success_notification">تمت إضافة تعليقك بنجاح</div>
 
     </section>
 
@@ -171,7 +223,7 @@
 
     <!-- Chatbot Icon -->
     <div id="mughader_chatbot_icon">
-        <img src="مكتب-سياحي/مكتب-سياحي-ذكاء-اصطناعي.jpg" alt="مكتب سياحي - شركة مغادر" title="مكتب سياحي - شركة مغادر"
+        <img src="مكتب-سياحي/مكتب-سياحي-ذكاء-اصطناعي.webp" alt="مكتب سياحي - شركة مغادر" title="مكتب سياحي - شركة مغادر"
             class="no_full_screen_image">
     </div>
 
